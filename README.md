@@ -51,7 +51,7 @@ _TODO: Write 2–4 sentences covering **what** you are building, **why** it matt
 | --- | --- | --- | --- | --- | --- |
 | 1 | __ | __ | Team Lead | _TODO_ | _TODO_ |
 | 2 | _TODO_ | _TODO_ | Developer | _TODO_ | _TODO_ |
-| 3 | _Cao Fei _13755803_ | Developer | _Database Modeling_ | _Mongoose schemas,seed data_ |
+| 3 | _Cao Fei| _13755803_ | Developer | _Database Modeling_ | _Mongoose schemas,seed data_ |
 | 4 | _TODO_ | _TODO_ | Documentation | _TODO_ | _TODO_ |
 | 5 | _TODO_ | _TODO_ | QA / Testing | _TODO_ | _TODO_ |
 
