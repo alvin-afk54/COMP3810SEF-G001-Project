@@ -14,11 +14,11 @@
 | Field | Value |
 | --- | --- |
 | Course Code | COMP3810SEF |
-| Course Name | _TODO: e.g. Software Engineering Fundamentals_ |
+| Course Name | Server-side Technologies And Cloud Computing |
 | Group | G001 |
-| Academic Term | _TODO: e.g. Fall 2026_ |
-| Instructor / Tutor | _TODO: name_ |
-| Submission Deadline | _TODO: date_ |
+| Academic Term | 2026 Autumn |
+| Instructor |Dr. LIU Alin Yalin  |
+
 
 ---
 
