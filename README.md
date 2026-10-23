@@ -1,7 +1,8 @@
 # COMP3810SEF-G001-Project
 
 <!-- EDIT ME: One-to-two sentence summary of what this project actually is. -->
-> _TODO: Replace this line with a short, plain-language description of the project._
+> _TODO: A group project for COMP3810SEF (Server-side Technologies And Cloud Computing), Group G001.
+Kickoff: Node.js + Express + EJS + Mongoose scaffold (topic TBD / task-board style MVP)._
 
 <!-- EDIT ME: Badges are optional. Delete this block if you don't want them. -->
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
