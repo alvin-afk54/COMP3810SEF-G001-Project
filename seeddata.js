@@ -1,17 +1,8 @@
 //if you want to run type npm run seed
 
-require('dotenv').config();
 const mongoose = require('mongoose');
 const { User, Book } = require('./schema.js');
-
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  console.error('Missing MONGODB_URI. Copy .env.example to .env and fill it in.');
-  process.exit(1);
-}
-
-mongoose.connect(MONGODB_URI)
+mongoose.connect('***') //put your own mongoose driver here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .then(() => {
   console.log(' MongoDB connected successfully');
   runTest();
@@ -29,7 +20,7 @@ async function runTest() {
     });
     await stu1.save();
     console.log(`user:${stu1.name} saved`);
-
+    
     const stu2 = new User({
       username: "s1397832",
       password: "Abc22222",
@@ -37,7 +28,7 @@ async function runTest() {
     });
     await stu2.save();
     console.log(`user:${stu2.name} saved`);
-
+    
     const stu3 = new User({
       username: "s3780234",
       password: "Def33333",
@@ -45,7 +36,7 @@ async function runTest() {
     });
     await stu3.save();
     console.log(`user:${stu3.name} saved`);
-
+    
     const book1 = new Book({
       title: "Computer networks. 1",
       author: "Kurose, James F. ; Ross, Keith W.",
@@ -75,7 +66,8 @@ async function runTest() {
     });
     await book3.save();
     console.log(`book:${book3.title} saved`);
+    
   } catch (error) {
-    console.log('❌ Error: ', error.message);
+    console.log('Error: ', error.message);
   }
 }
