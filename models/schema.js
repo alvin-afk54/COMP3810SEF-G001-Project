@@ -1,4 +1,4 @@
-//if you want to test, put package.json from the views folder, schema.js from models folder and the server.js from seed folder in the same folder, and type npm install, npm start 
+//if you want to test, put package.json and seeddata.js from the views folder, schema.js from models folder into the same folder, and type npm run seed 
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
