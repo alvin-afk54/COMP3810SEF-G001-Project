@@ -1,8 +1,17 @@
 //if you want to run type npm run seed
 
+require('dotenv').config();
 const mongoose = require('mongoose');
 const { User, Book } = require('./schema.js');
-mongoose.connect('mongodb+srv://3810:cf050801@cluster0.rqfolws.mongodb.net/')
+
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  console.error('Missing MONGODB_URI. Copy .env.example to .env and fill it in.');
+  process.exit(1);
+}
+
+mongoose.connect(MONGODB_URI)
 .then(() => {
   console.log(' MongoDB connected successfully');
   runTest();
