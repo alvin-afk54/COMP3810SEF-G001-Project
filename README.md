@@ -1,10 +1,6 @@
 # COMP3810SEF-G001-Project
-
-<!-- EDIT ME: One-to-two sentence summary of what this project actually is. -->
-> _TODO: A group project for COMP3810SEF (Server-side Technologies And Cloud Computing), Group G001.
-Kickoff: Node.js + Express + EJS + Mongoose scaffold (topic TBD / task-board style MVP)._
-
-<!-- EDIT ME: Badges are optional. Delete this block if you don't want them. -->
+> A server-side web application for COMP3810SEF (Server-side Technologies And Cloud Computing), Group G001. Built with Node.js + Express + EJS + Mongoose scaffold to deliver a Student-Library Book Management System MVP.
+> 
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![Course](https://img.shields.io/badge/course-COMP3810SEF-blue)
 
@@ -24,54 +20,53 @@ Kickoff: Node.js + Express + EJS + Mongoose scaffold (topic TBD / task-board sty
 ---
 
 ## Project Overview
-
-<!-- EDIT ME: Describe the problem, the goal, and the intended users. -->
-_TODO: Write 2–4 sentences covering **what** you are building, **why** it matters, and **who** it is for._
+We are building a server-side web application for a student library book management system using Express.js, MongoDB, and EJS. It matters because it demonstrates practical server-side technologies, authentication, and RESTful API design. The system is designed for university students (as borrowers) and librarians (as administrators).
 
 ### Objectives
 
-- [ ] _TODO: objective 1_
-- [ ] _TODO: objective 2_
-- [ ] _TODO: objective 3_
+- [ ] Implement core CRUD operations for book records and borrowing management.
+- [ ] Develop cookie-session based authentication with Admin and Student roles.
+- [ ] Deploy the application on an Ubuntu virtual machine and provide RESTful APIs.
 
 ### Scope
 
 **In scope**
-
-- _TODO_
+- User authentication (cookie-session) for Admin (Librarian) and Student roles.
+- Admin features: Book CRUD operations, viewing borrowing records, processing returns.
+- Student features: Browsing books, borrowing, returning/renewing, and reserving out-of-stock books.
+- Unauthenticated RESTful CRUD APIs for books (for curl testing).
+- Deployment and demonstration on an Ubuntu virtual machine.
 
 **Out of scope**
-
-- _TODO_
+- Complex UI/UX designs or frontend frameworks (e.g., React/Vue).
+- Advanced library features like fines/payments or automated email notifications.
+- Authenticated RESTful APIs (only unauthenticated APIs are provided).
+- Native mobile application development.
 
 ---
 
-##🐡 Team Members
+## 🧑‍💻 Team Members
 
-| # | Name | Student ID | Role | GitHub Handle | Responsibilities |
-| --- | --- | --- | --- | --- | --- |
-| 1 | XU Lanxin | 13744757 | Team Lead | Backend Lead & Integration | Scaffolding, routing, session setup, integration |
-| 2 | _TODO_ | _TODO_ | Developer | _TODO_ | _TODO_ |
-| 3 | _Cao Fei_| _13755803_ | _Developer_ | _Database Modeling_ | _Mongoose schemas,seed data_ |
-| 4 | _TODO_ | _TODO_ | Documentation | _TODO_ | _TODO_ |
-| 5 | _TODO_ | _TODO_ | QA / Testing | _TODO_ | _TODO_ |
-
-<!-- EDIT ME: Add or remove rows to match the actual group size. -->
+| # | Name | Student ID | Role | Responsibilities |
+| --- | --- | --- | --- | --- |
+| 1 | XU Lanxin | 13744757 | Team Lead | Scaffolding, routing, session setup, integration |
+| 2 | Chi Xuanyi | 13766798 | Developer | Login & sign-up, session, access-control middleware |
+| 3 | Cao Fei | 13755803 | Developer | Mongoose schemas, seed data |
+| 4 | Fong Chun Hung | 14282138 | Documentation | README, local launch check, zip packaging, demo PPT |
+| 5 | Aw Chun Yin / Wong Ching Fung | 14282568 / 13886514 | QA / Testing | EJS templates, login page, CRUD pages & styling; API routes, HTTP methods, curl test commands |
 
 ---
 
 ## Tech Stack
 
-<!-- EDIT ME: Delete whatever does not apply. -->
-
 | Layer | Choice |
 | --- | --- |
-| Programming Language | _TODO_ |
-| Framework / Libraries | _TODO_ |
-| Database | _TODO_ |
+| Programming Language | JavaScript (Node.js) |
+| Framework / Libraries | Express, EJS, Mongoose |
+| Database | MongoDB |
 | Version Control | Git + GitHub |
-| Project Management | _TODO: e.g. GitHub Projects / Trello_ |
-| Communication | _TODO: e.g. WhatsApp / MS Teams_ |
+| Project Management | GitHub Projects |
+| Communication | WhatsApp |
 
 ---
 
@@ -86,39 +81,23 @@ COMP3810SEF-G001-Project/
 └── README.md           # This file
 ```
 
-<!-- EDIT ME: Update the tree above once the real folder layout settles. -->
-
 ---
 
-## Getting Started
+## Business Features Overview
 
-### Prerequisites
+### 👨‍🏫 Admin (Librarian)
+1. Login and logout
+2. Book CRUD: Add new books, modify book info, delete book records
+3. View all student borrowing records
+4. Process student book returns (update Borrow record status to returned, restore available book stock)
 
-- _TODO: e.g. Python 3.10+ / Node.js 18+ / JDK 17_
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/xulanxin30-tech/COMP3810SEF-G001-Project.git
-
-# 2. Move into the project folder
-cd COMP3810SEF-G001-Project
-
-# TODO: add dependency installation commands
-```
-
-### Running the Project
-
-```bash
-# TODO: add the run command
-```
-
-### Running Tests
-
-```bash
-# TODO: add the test command
-```
+### 👨‍🎓 Student
+1. Login and logout
+2. Browse all books list
+3. Borrow available books
+4. View personal borrowings: display remaining return days, perform renewal
+5. Submit a reservation when book stock is unavailable
+6. View personal reservation records
 
 ---
 
@@ -139,31 +118,22 @@ cd COMP3810SEF-G001-Project
 
 ---
 
-## Deliverables & Timeline
-
-| Milestone | Deliverable | Due Date | Status |
-| --- | --- | --- | --- |
-| M1 | Project proposal | _TODO_ | ⬜ Not started |
-| M2 | Requirements & design document | _TODO_ | ⬜ Not started |
-| M3 | Prototype / MVP | _TODO_ | ⬜ Not started |
-| M4 | Final implementation | _TODO_ | ⬜ Not started |
-| M5 | Final report & presentation | _TODO_ | ⬜ Not started |
-
-<!-- Status legend: ⬜ Not started · 🟨 In progress · ✅ Done -->
 
 ---
 
 ## License
 
-<!-- EDIT ME: Pick one, or remove this section entirely. -->
-_TODO: choose a license, e.g. MIT._
+This project is a group assignment for COMP3810SEF course for academic evaluation only.
+All code within this project is for educational purposes. Redistribution, commercial usage is prohibited without group members’ permission.
 
 ---
 
 ## Acknowledgements
 
-<!-- EDIT ME: Credit any references, tutorials, datasets or third-party assets used. -->
-- _TODO_
+We would like to thank the lecturer and tutors of COMP3810SEF for project guidance and providing sample project code.
+We refer to official documentation of Express.js, Mongoose‑MongoDB and EJS for implementation.
+Some online technical tutorials are referenced for debugging and problem‑solving.
+All core functionalities are implemented by our group members.
 
 ---
 
